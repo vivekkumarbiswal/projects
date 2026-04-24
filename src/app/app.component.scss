@@ -1,0 +1,41 @@
+/* Sidebar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0; /* 👈 moved from left to right */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidenav.open {
+  width: 250px;
+}
+
+/* Links */
+.sidenav a {
+  padding: 10px 32px 10px 16px; /* adjusted padding */
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: right; /* optional: align text nicely */
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  left: 20px; /* 👈 moved to left side inside panel */
+  font-size: 30px;
+  cursor: pointer;
+}
