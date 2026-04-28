@@ -1,0 +1,26 @@
+import { NgFor, NgIf } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+@Component({
+  selector: 'app-todo',
+  imports: [FormsModule, NgIf, NgFor],
+  templateUrl: './todo.component.html',
+  styleUrl: './todo.component.scss',
+})
+export class TodoComponent {
+  tasks: string[] = [];
+  newTask: string = '';
+
+  addTask() {
+    if (!this.newTask.trim()) {
+      return;
+    }
+    this.tasks.push(this.newTask);
+    this.newTask = '';
+  }
+
+  removeTask(index: number) {
+    this.tasks.splice(index, 1);
+  }
+}

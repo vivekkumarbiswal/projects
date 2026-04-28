@@ -1,0 +1,18 @@
+<!-- Sidebar -->
+<div class="sidenav" [class.open]="isOpen">
+  <a class="closebtn" (click)="toggleNav()">&times;</a>
+
+  <a routerLink="/profile" (click)="toggleNav()">Profile</a>
+  <a routerLink="/counter" (click)="toggleNav()">Counter</a>
+  <a routerLink="/todo" (click)="toggleNav()">ToDo List</a>
+  <a routerLink="stop-watch" (click)="toggleNav()">Stop-Watch</a>
+</div>
+
+<main class="content">
+  <div class="main">
+    <span class="menu-btn" (click)="toggleNav()" style="float: right">
+      &#9776; Menu
+    </span>
+    <router-outlet></router-outlet>
+  </div>
+</main>
